@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cozy Photo Album</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Caveat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="table-surface">
+      <div class="book-stage">
+        <div class="book-shell" id="bookShell">
+          <div class="book-cover" id="bookCover" role="button" tabindex="0" aria-label="Open book">
+            <div class="book-spine" aria-hidden="true"></div>
+            <h1 class="cover-title">Caro Papà</h1>
+            <p class="cover-text">made whit love</p>
+          </div>
+
+          <div class="book-spread" id="bookSpread">
+            <div class="album-topbar">
+              <button id="closeButton" class="nav-button small" type="button" aria-label="Close book">✕</button>
+            </div>
+
+            <div class="album-book">
+              <section class="page-card left-page">
+                <div class="page-heading">
+                  <div>
+                    <h1 id="pageTitle" class="editable-text" contenteditable="true" spellcheck="false">Spring Morning</h1>
+                  </div>
+                  <button id="prevButton" class="nav-button" type="button">←</button>
+                </div>
+
+                <div class="photo-grid" id="photoGrid"></div>
+              </section>
+
+              <section class="page-card right-page">
+                <div class="page-heading">
+                  <div>
+                    <h2 id="pageSubtitle" class="editable-text" contenteditable="true" spellcheck="false">...tu eri lì</h2>
+                  </div>
+                  <button id="nextButton" class="nav-button" type="button">→</button>
+                </div>
+
+                <div id="rightPhotoSpot" class="right-photo-spot" hidden></div>
+
+                <div class="info-card">
+                  <p id="pageSummary" class="editable-text"></p>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
